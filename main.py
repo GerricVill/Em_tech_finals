@@ -16,7 +16,7 @@ st.write("# Clothes Classification System")
 file = st.file_uploader("Choose clothes photo from computer", type=["jpg", "png"])
 
 def import_and_predict(image_data, model):
-    size = (28, 28)
+    size = (28, 28,1)
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     image = ImageOps.grayscale(image)
     img = np.asarray(image)
